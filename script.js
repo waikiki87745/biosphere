@@ -2,6 +2,7 @@
 const select = (selector) => document.querySelector(selector),
   selectAll = (selector) => document.querySelectorAll(selector);
 
+console.log("git");
 /*----- Vars declaration ------*/
 // Sections
 let sections = gsap.utils.toArray(".section-container"),
@@ -39,10 +40,10 @@ anchors.forEach((anchor) => {
     gsap.to(window, {
       scrollTo: {
         y: y,
-        autoKill: false
+        autoKill: false,
       },
       duration: duration,
-      ease: easingFunction
+      ease: easingFunction,
     });
   });
 });
@@ -84,14 +85,14 @@ let mainTl = gsap
         inertia: false,
         delay: 0.1,
         // directional: false,
-        duration: { min: 0.1, max: 0.8 }
+        duration: { min: 0.1, max: 0.8 },
       },
-      end: () => "+=" + track.offsetWidth
-    }
+      end: () => "+=" + track.offsetWidth,
+    },
   })
   .to(sections, {
     xPercent: -100,
-    ease: "none"
+    ease: "none",
   });
 
 /*---- Sections animation -----*/
@@ -107,17 +108,17 @@ gsap.timeline({
       gsap.to(".nav__brand", {
         scale: 0.3333,
         duration: duration,
-        ease: easingFunction
+        ease: easingFunction,
       });
     },
     onEnterBack: () => {
       gsap.to(".nav__brand", {
         scale: 1,
         duration: duration,
-        ease: easingFunction
+        ease: easingFunction,
       });
-    }
-  }
+    },
+  },
 });
 
 // Home section
@@ -128,7 +129,7 @@ gsap
       start: "left left",
       end: "right left",
       scrub: true,
-      containerAnimation: mainTl
-    }
+      containerAnimation: mainTl,
+    },
   })
   .to(sHome, { opacity: 0 });
