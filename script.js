@@ -2,7 +2,6 @@
 const select = (selector) => document.querySelector(selector),
   selectAll = (selector) => document.querySelectorAll(selector);
 
-console.log("git");
 /*----- Vars declaration ------*/
 // Sections
 let sections = gsap.utils.toArray(".section-container"),
@@ -91,7 +90,7 @@ let mainTl = gsap
     },
   })
   .to(sections, {
-    xPercent: -100,
+    xPercent: -100 * (sections.length - 1),
     ease: "none",
   });
 
