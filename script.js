@@ -49,22 +49,22 @@ anchors.forEach((anchor) => {
 
 // Anchor animation
 // sections.forEach((panel, i) => {
+//   let links = Array.from(anchors);
+//   console.log(links[i]);
 //   ScrollTrigger.create({
-//     start: "left center",
-//     end: "right center",
-//     markers: true,
+//     trigger: panel,
+//     onEnter: () => {
+//       gsap.to(links[i], { backgroundColor: "green" });
+//     },
 //     onLeave: () => {
-//       if (anchors[i + 1]) {
-//         gsap.to(anchors[i + 1], { scale: 1.3, color: "white" });
-//         gsap.to(anchors[i], { scale: 1, color: "blue" });
-//       }
+//       gsap.to(links[i], { backgroundColor: "white" });
 //     },
 //     onEnterBack: () => {
-//       gsap.to(anchors[i], { scale: 1.3, color: "white" });
-//       if (anchors[i + 1]) {
-//         gsap.to(anchors[i + 1], { scale: 1, color: "blue" });
-//       }
-//     }
+//       gsap.to(links[i], { backgroundColor: "green" });
+//     },
+//     onLeaveBack: () => {
+//       gsap.to(links[i], { backgroundColor: "white" });
+//     },
 //   });
 // });
 
